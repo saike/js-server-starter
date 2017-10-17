@@ -1,0 +1,13 @@
+{
+  "name": "cryptobot-server",
+  "version": "1.0.0",
+  "description": "bot for poloniex crypto exchange",
+  "main": "index.js",
+  "scripts": {},
+  "author": "saike <kishkoglot@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-es6-template-engine": "^2.0.2"
+  }
+}

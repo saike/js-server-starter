@@ -4,8 +4,23 @@
   "description": "bot for poloniex crypto exchange",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "babel-node": "babel-node --presets=latest",
+    "dev": "node_modules/.bin/nodemon -L --exec npm run babel-node -- ./server/cryptobot.js",
+    "prod": "server/node_modules/.bin/pm2 start --interpreter babel-node cryptobot.js",
+    "restart": "server/node_modules/.bin/pm2 restart --interpreter babel-node cryptobot",
+    "stop": "server/node_modules/.bin/pm2 stop --interpreter babel-node cryptobot",
+    "migrate": "babel-node ./node_modules/.bin/mm migrate --config=config/mongodb.js"
   },
   "author": "saike <kishkoglot@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-latest": "^6.24.1",
+    "nodemon": "^1.12.1"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  }
 }

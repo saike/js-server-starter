@@ -1,0 +1,9 @@
+{
+  "name": "cryptobot-client",
+  "version": "1.0.0",
+  "description": "bot for poloniex crypto exchange",
+  "main": "index.js",
+  "scripts": {},
+  "author": "saike <kishkoglot@gmail.com>",
+  "license": "ISC"
+}
